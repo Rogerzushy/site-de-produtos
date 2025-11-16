@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+
+    <script>
+        const logado = localStorage.getItem("usuariologado");
+        if (!logado) {
+          window.location.href = "cadastro.html"; 
+        }
+      </script>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="dado.html">
+            <i class="bi bi-bar-chart-fill"></i>
+            <h3>Sistema de cadastro</h3>
+        </a>
+        </div>
+        <ul>
+            <li><a href="dado.html">Home</a></li>
+            <li><a href="#">Cadastro</a></li>
+            <li><a href="#" class="Sair">Sair</a></li>
+        </ul>
+    </nav>
+
+  <main>
+    <div class="cadastro">
+        <h1>Cadastro de Produto</h1>
+       <fieldset>
+           <label><h3>Data</h3>
+           <input type="date" class="data"></label>
+
+           <label><h3>Produto</h3>
+            <Select class="produtoselect" required>
+                <option value=""></option>
+                <option value="Bermuda">Bermuda</option>
+                <option value=" Bone">Boné</option>
+                <option value="Calça">Calça</option>
+                <option value="Camisa">Camisa</option>
+                <option value="Camiseta">Camiseta</option>
+                <option value="Chapeu">Chapéu</option>
+                <option value="Chinelo">Chinelo</option>
+                <option value="Saia">Saia</option>
+                <option value="Tenis">Ténis</option>
+            </Select>
+        </label>
+        </fieldset>
+
+        <fieldset>
+            <label><h3>Código</h3>
+            <input type="text" class="codigo"></label>
+
+            <label><h3>Marca</h3>
+                <select class="marcaselect" required>
+                    <option value=""></option>
+                    <option value="Amarelo">Amarelo</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Branca">Branca</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Vermelha">Vermelha</option>
+                </select> </label>
+        </fieldset>
+
+        <fieldset>
+            <label><h3>Funcionário</h3>
+            <input type="text" class="funcionario"></label>
+
+            <label><h3>Valor</h3>
+            <input type="text" class="valor"></label>
+        </fieldset>
+       <fieldset>
+        <button class="btn btncriar"><i class="bi bi-plus-lg"></i>Criar</button>
+        
+        <button class="altrarbutton hidden"><i class="bi bi-plus-lg"></i>Alterar</button>
+    </fieldset>
+    </div>
+
+    <div class="dados">
+        <label class="pesquisalabel"><h3>Faça Sua Pesquisa!</h3>
+            <input type="text" class="search" placeholder="pesquisa">
+        </label>
+
+     <table class="tableprincipal">
+        <thead>
+           <tr>
+               <th>DATA<i class="bi bi-funnel-fill" onclick="ordernar(0)"></i></th>
+               <th>CODIGO<i class="bi bi-funnel-fill" onclick="ordernar(1)"></i></th>
+               <th>PRODUTO<i class="bi bi-funnel-fill" onclick="ordernar(2)"></i></th>
+               <th>MARCA<i class="bi bi-funnel-fill" onclick="ordernar(3)"></i></th>
+               <th>FUNCIONARIO<i class="bi bi-funnel-fill" onclick="ordernar(4)"></i></th>
+               <th>VALOR<i class="bi bi-funnel-fill" onclick="ordernar(5)"></i></th>
+               <th></th>
+               <th></th>
+           </tr>
+        </thead>
+   
+        <tbody class="tbody">
+        </tbody>
+       
+       </table>
+    </div>
+  </main>
+
+    <script src="dado.js"></script>
+</body>
+</html>

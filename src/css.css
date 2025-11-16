@@ -1,0 +1,416 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background-color: #f5f7fa;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  /* Nav */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    padding: 0 2%;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #1a252f;
+  }
+  
+  nav div a {
+    display: flex;
+    align-items: center;
+    color: #ecf0f1;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  nav div a i {
+    font-size: 28px;
+    margin-right: 8px;
+    padding: 6px;
+    border-radius: 6px;
+    background: #3498db;
+    color: white;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    list-style: none;
+  }
+  
+  nav ul li a {
+    color: #ecf0f1;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #3498db;
+  }
+  
+  /* Main layout */
+  main {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 120px;
+    flex-wrap: wrap;
+  }
+  
+  /*  */
+  .cadastro {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 500px;
+    width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+  }
+  
+  .cadastro h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .cadastro h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .cadastro fieldset {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border: none;
+  }
+  
+  .cadastro input,
+  .cadastro select,
+  .cadrastologin input,
+  .naopossuoconta input,
+  .Esquecisenha input,
+  .alterarsenha input {
+    width: 260px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    color: #2c3e50;
+    background-color: #fdfdfd;
+    text-transform: uppercase;
+    transition:  0.3s ease;
+  }
+    
+  .cadastro select:focus,
+  .cadastro input:focus,
+  .cadrastologin input:focus,
+  .alterarsenha input:focus{ 
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.4);
+    outline: none;
+  }
+  .cadastro input:focus,
+  .cadastro select:focus,
+  .alterarsenha input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  .cadastro button,/*button home.html*/
+  .cadrastologin button,
+  .naopossuocontabtn,
+  .Esquecisenhabtn,
+  .alterarsenhabtn /*button cadrasto.html*/{
+    width: 100%;
+    padding: 12px;
+    margin-top: 30px;
+    font-size: 18px;
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  .cadastro button i {
+    padding-right: 5px;
+  }
+  
+  .cadastro button:hover, /*button home.html*/
+  .cadrastologin button:hover,
+  .alterarsenhabtn:hover /*button cadrasto.html*/{
+    background: linear-gradient(to right, #2980b9, #1c5980);
+  }
+  
+  /* Dados */
+  .dados {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 800px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border: 1px solid #ccc;
+    max-height: 700px;
+    overflow-y: auto;
+  }
+  
+  /* Tabela */
+  .tableprincipal {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .tableprincipal th {
+    background: #ecf0f1;
+    padding: 10px;
+    font-size: 16px;
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+  }
+  
+  .tableprincipal td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .tableprincipal tr:hover {
+    background-color: #dedfe0;
+    transition: 0.3s ease;
+  }
+  
+  /* Ícones */
+  .bi-trash2-fill,
+  .bi-pencil-square {
+    font-size: 18px;
+    color: #bbb;
+    transition: color 0.3s ease;
+  }
+  
+  .bi-trash2-fill:hover {
+    color: #e74c3c;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .bi-pencil-square:hover {
+    color: #27ae60;
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  /* Hover */
+  tr:hover .bi-trash2-fill,
+  tr:hover .bi-pencil-square {
+    color: #3498db;
+  }
+  
+  /* Pesquisa */
+  .pesquisalabel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #ecf0f1;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  .pesquisalabel input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    margin-left: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .pesquisalabel input:focus {
+    border-color: #3498db;
+    outline: none;
+  }
+  
+  /* Botão alterar */
+  button.altrarbutton {
+    background: linear-gradient(to right, #27ae60, #1e8449);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button.altrarbutton:hover {
+    background: linear-gradient(to right, #1e8449, #145a32);
+  }
+  
+  /* esconder*/
+  .hidden {
+    display: none;
+  }
+
+  /*css de cadastro*/
+
+  .cadrastologin,
+  .alterarsenha{
+    background: white;
+    justify-content: center;
+    width: 650px;
+    height: 390px;
+    top: 30%;
+    position: fixed;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.alterarsenha{
+  height: 600px;
+  margin-top: -60px;
+}
+.cadrastologin input,
+.naopossuoconta input,
+.Esquecisenha input,
+.alterarsenha input {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.cadrastologin label,
+.naopossuoconta label,
+.Esquecisenha label,
+.alterarsenha label{
+  margin-bottom: 10px;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+.cadrastologin ul {
+  display: flex;
+  margin: 0 auto 0 auto;
+  width: 50%;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.cadrastologin ul li {
+  list-style: none;
+}
+.cadrastologin ul li a{
+  color: rgba(0, 10, 155, 0.61);
+  text-decoration: none;
+}
+.cadrastologin ul li a:hover{
+  color: rgb(0, 10, 155);
+}
+input.login ,
+input.senha {
+ text-transform: none;
+}
+
+/*nao possuo conta*/
+.naopossuoconta{
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  height: 700px;
+  overflow-y: auto;
+ position: fixed;
+  z-index: 2;
+}
+.naopossuoconta input,
+.Esquecisenha input{
+  text-transform: none;
+}
+.bi-x-circle{
+  width: 22px;
+  height: 30px;
+  right: 0;
+  font-size: 22px;
+  margin-right: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.naopossuocontabtn,
+.Esquecisenhabtn{
+  width: 40%;
+  margin-top: 0px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.naopossuoconta label.nome,
+.Esquecisenha label.loginlabel{
+  margin-top: 40px;
+  display: flex;
+}
+.fundonaopossuoconta{
+  margin-top: -80px;
+  width: 100vw;
+  height: 95.8vh;
+  background: rgba(77, 89, 253, 0.151);
+  z-index: 1;
+}
+.bi-eye-fill{
+  position: absolute;
+ margin-left: -40px;
+ margin-top: 10px;
+ margin-bottom: 20px;
+ font-size: 20px;
+ cursor: pointer;
+ color: rgba(0, 0, 0, 0.349);
+}
+.alterarsenha h2 {
+  margin: -20px auto 40px auto;
+  text-transform: uppercase;
+  color: rgba(44, 44, 44, 0.801);
+  text-decoration:underline;
+}
+
+.Esquecisenha{
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 700px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  height: 400px;
+  overflow-y: auto;
+ position: fixed;
+  z-index: 2;
+}
+.eyelogin{
+  display: flex;
+  right: 0;
+  margin: 0 40px 0 0;
+  font-size: 23px;
+}
